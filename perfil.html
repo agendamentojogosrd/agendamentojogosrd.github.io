@@ -18,39 +18,61 @@
                 <div>
                     <img src="instagran.jpg" alt="" width="20" height="20";>
                     <label for="instagranInput"></label>
-                    <input type="text" id="instagranInput" name="Instagram do atleta" class="instagranInput" placeholder=" Instagram do atleta" style="width: 250px;">
+                        <input type="text" id="instagranInput" name="Instagram do atleta" class="instagranInput" placeholder=" Instagram do atleta" style="width: 250px;">
                     <br><br>
                 </div>
 
                 <div class="linha">
                     <label for="partida" >Partida: </label>
-                    <input type="text"name="Time A" placeholder=" Time A" style="width: 100px;"> X <input type="text" name="Time B"placeholder=" Time B" style="width: 100px;">
+                        <input type="text"name="Time A" placeholder=" Time A" style="width: 100px;"> X <input type="text" name="Time B"placeholder=" Time B" style="width: 100px;">
                 </div>
                 <br><br>
 
                 <div>
                     <label for="categoria">Categoria: </label>
-                    <input class="tamanho" type="text" name="Categoria" placeholder=" Exemplo: Sub11 / Sub13 / Sub15" style="width: 198px;">
+                        <input class="tamanho" type="text" name="Categoria" placeholder=" Exemplo: Sub11 / Sub13 / Sub15" style="width: 198px;">
                 </div>
 
                 <br>
                 <div>
                     <label for="local">Local: </label>
-                    <input type="text" name="Local" placeholder=" Digite aqui o local da partida" style="width: 229px;">
+                        <input type="text" name="Local" placeholder=" Digite aqui o local da partida" style="width: 229px;">
                 </div>
                     <br>
                 <div>
                     <label for="data">Data: </label>
-                    <input type="date">
-                    <br><br>
-                    <label for="horário">Horário: </label>
-                    <input type="time">
-                </div>     
+                        <input type="date" id="dataInput">
+                    <label for="horario">Horário: </label>
+                        <input type="time" id="horarioInput">
+                </div>    
+
+                <div class="sumir">
+                    <label>Data Copiada: </label>
+                        <input type="text" name="Data" id="dataCopia">               
+                </div>
+                <div class="sumir">
+                    <label>Horário Copiado: </label>
+                        <input type="text" name="Horario" id="horarioCopia">
+                </div>
 
                 <!---------------Botão------------------------>
                 <input name="submit" id="submit" class="botao" type="submit">
             </fieldset>
         </form>
     </div> 
+    <script>
+        // Adiciona ouvinte de evento para o campo de data
+        document.getElementById('dataInput').addEventListener('input', function() {
+            document.getElementById('dataCopia').value = this.value;
+        });
+
+        // Adiciona ouvinte de evento para o campo de horário
+        document.getElementById('horarioInput').addEventListener('input', function() {
+            document.getElementById('horarioCopia').value = this.value;
+        });
+    </script>
+
+
+    
 </body>
 </html>
