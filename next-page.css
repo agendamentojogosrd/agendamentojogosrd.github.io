@@ -47,9 +47,7 @@ legend{
 .linha{
     display: inline-flex;
 }
-.sumir{
-    display: none;
-}
+
 
 /* Estilos para o botão de registro de data */
 .botao {
