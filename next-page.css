@@ -47,6 +47,9 @@ legend{
 .linha{
     display: inline-flex;
 }
+.sumir{
+    display: none;
+}
 
 /* Estilos para o botão de registro de data */
 .botao {
@@ -83,7 +86,4 @@ legend{
     .inputBox {
         width: 100%;
     }
-}
-.sumir{
-    display: none;
 }
